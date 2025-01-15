@@ -33,7 +33,7 @@ const TotalIncome = ({ user }) => {
       .eq("email", user[0]?.email);
 
     if (error) {
-      console.error("Error fetching data:", error);
+      // console.error("Error fetching data:", error);
       return;
     }
 

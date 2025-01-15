@@ -22,7 +22,6 @@ export default function Auth() {
   const { colors } = useTheme();
 
   async function signInWithEmail() {
-    if(!email || !password) return ;
     setLoading(true);
     const { error } = await supabase.auth.signInWithPassword({
       email: email,
@@ -33,8 +32,6 @@ export default function Auth() {
   }
 
   async function signUpWithEmail() {
-    if(!email || !password) return ;
-
     setLoading(true);
     const { data: { session }, error } = await supabase.auth.signUp({
       email: email,

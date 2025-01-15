@@ -107,7 +107,7 @@ const ProfilePage = () => {
       .eq("email", user?.user_metadata?.email);
 
     if (error) {
-      console.error(error);
+  
       Alert.alert("Error fetching data");
     } else {
       setUserName(data[0]?.username || "");

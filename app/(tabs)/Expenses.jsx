@@ -128,7 +128,7 @@ export default function ExpensesPage() {
         .eq("email", user?.user_metadata?.email);
 
       if (error) {
-        console.error(error);
+        
         Alert.alert("Error fetching data");
       } else {
         setUserExpenses(data[0]?.expenses || []);
